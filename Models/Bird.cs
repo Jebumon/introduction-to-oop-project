@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IntroductionTo_OOPs_Project.Models
 {
-    public abstract class Bird
+    public abstract class Bird : IDance
     {
         public string Name { get; private set; }
         public string Color { get; private set; }
@@ -21,6 +21,20 @@ namespace IntroductionTo_OOPs_Project.Models
         public virtual void Fly()
         {
             Console.WriteLine("Hi there! I can fly.");
+        }
+        public void Spin()
+        {
+            Console.WriteLine($"{Name} spin!");
+        }
+
+        public void DoTheCaterpillar()
+        {
+            Console.WriteLine($"{Name} do the wriggly woo!");
+        }
+
+        public void Jump()
+        {
+            Console.WriteLine($"{Name} jump in the air!");
         }
     }
 }
