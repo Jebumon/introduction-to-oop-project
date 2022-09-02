@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IntroductionTo_OOPs_Project.Models
 {
-    public class Bird
+    public abstract class Bird
     {
         public string Name { get; private set; }
         public string Color { get; private set; }
@@ -16,17 +16,11 @@ namespace IntroductionTo_OOPs_Project.Models
             Name = name;
             Color = color;
         }
+        public abstract void Speak();
 
-        public void Speak()
+        public virtual void Fly()
         {
-            Console.WriteLine($"My name is {Name} and I am a {Color} bird.");
-        }
-
-        public void Fly()
-        {
-            Console.WriteLine($"I'm {Name} and I can fly high in the blue sky!");
+            Console.WriteLine("Hi there! I can fly.");
         }
     }
-    //The Pigeon extends the base class Bird
-    
 }
